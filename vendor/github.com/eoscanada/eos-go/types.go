@@ -187,15 +187,15 @@ type SymbolCode uint64
 
 // EOSSymbol represents the standard EOS symbol on the chain.  It's
 // here just to speed up things.
-var EOSSymbol = Symbol{Precision: 4, Symbol: "EOS"}
+var EOSSymbol = Symbol{Precision: 5, Symbol: "TLOS"}
 
 func NewEOSAssetFromString(amount string) (out Asset, err error) {
 	if len(amount) == 0 {
 		return out, fmt.Errorf("cannot be an empty string")
 	}
 
-	if strings.Contains(amount, " EOS") {
-		amount = strings.Replace(amount, " EOS", "", 1)
+	if strings.Contains(amount, " TLOS") {
+		amount = strings.Replace(amount, " TLOS", "", 1)
 	}
 	if !strings.Contains(amount, ".") {
 		val, err := strconv.ParseInt(amount, 10, 64)

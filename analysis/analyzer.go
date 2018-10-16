@@ -125,7 +125,7 @@ func (a *Analyzer) analyzeAction(idx int, act *eos.Action) (err error) {
 		_, _ = h.Write(obj.Code)
 		a.Pf("Code's SHA256: %s\n", hex.EncodeToString(h.Sum(nil)))
 		a.Pf("Contains the string 'SYS': %v\n", bytes.Contains(obj.Code, []byte("SYS")))
-		a.Pf("Contains the string 'EOS': %v\n", bytes.Contains(obj.Code, []byte("EOS")))
+		a.Pf("Contains the string 'TLOS': %v\n", bytes.Contains(obj.Code, []byte("TLOS")))
 		a.VerbDump(obj.Code)
 
 	case *system.SetABI:
