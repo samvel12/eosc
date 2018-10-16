@@ -10,8 +10,8 @@ import (
 
 	"github.com/eoscanada/eos-go"
 	"github.com/eoscanada/eos-go/ecc"
-	"github.com/eoscanada/eosc/cli"
-	eosvault "github.com/eoscanada/eosc/vault"
+	"github.com/samvel12/eosc/cli"
+	eosvault "github.com/samvel12/eosc/vault"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
